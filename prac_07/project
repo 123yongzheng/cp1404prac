@@ -1,0 +1,4 @@
+name: indicates the name of the project
+start_date: start date of the project
+priority: The priority of the project
+completed_percentage: Indicates the completion percentage of the project
