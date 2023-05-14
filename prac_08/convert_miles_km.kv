@@ -1,0 +1,32 @@
+<ConvertMilesKm>:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: '48dp'
+        TextInput:
+            id: miles_input
+            text: '0'
+            input_filter: 'float'
+            multiline: False
+            on_text: root.handle_increment(0)
+        Button:
+            text: '+'
+            on_press: root.handle_increment(1)
+        Button:
+            text: '-'
+            on_press: root.handle_increment(-1)
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: '48dp'
+        Label:
+            text: 'Output:'
+            size_hint_x: 0.3
+        Label:
+            text: root.output_text
+            size_hint_x: 0.7
