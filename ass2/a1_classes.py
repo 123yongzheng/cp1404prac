@@ -4,6 +4,7 @@ Travel Tracker 1.0
 Student Name: CHEN YONGZHENG
 Date started: 28/4/2023
 """
+
 import csv
 import random
 FILENAME = "places.csv"
