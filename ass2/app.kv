@@ -1,0 +1,36 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        size_hint_x: 0.3
+        Spinner:
+            id: spinner
+            text: 'Sort by...'
+            values: ['Name', 'Priority']
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'Name:'
+            TextInput:
+                id: name_input
+                multiline: False
+            Label:
+                text: 'Priority:'
+            TextInput:
+                id: priority_input
+                multiline: False
+            Button:
+                text: 'Add Place'
+                on_release: app.add_place()
+    BoxLayout:
+        id: places_layout
+        orientation: 'vertical'
+    Label:
+        id: status_label
+        size_hint_y: 0.1
+        text: ''
+        halign: 'center'
+    BoxLayout:
+        size_hint_y: 0.1
+        Button:
+            text: 'Clear'
+            on_release: app.clear_fields()
